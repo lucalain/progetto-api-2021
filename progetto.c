@@ -28,7 +28,6 @@ struct nodoRankHeap
 
 void minHeapify(struct nodoHeap nodi[],int n,int heapSize)
 {
-	//min
 	struct nodoHeap temp;
 	int posMin;
 	int l = 2*n+1;
@@ -51,8 +50,6 @@ void minHeapify(struct nodoHeap nodi[],int n,int heapSize)
 		nodi[n] = nodi[posMin];
 		nodi[posMin] = temp;
 		minHeapify(nodi,posMin,heapSize);
-		//minHeapify(nodi,(posMin-1)/2,heapSize);
-		//tolto migliorato minHeap
 	}
 }
 struct nodoHeap estraiMin(struct nodoHeap nodi[],int* heapSize)
@@ -232,11 +229,6 @@ struct nodoRankHeap cancellaMax(struct nodoRankHeap *topk,int *size)
 	struct nodoRankHeap max;
 	max.distanza = topk[0].distanza;
 	max.numeroGrafo = topk[0].numeroGrafo;
-	/*if (*size<1)
-	{
-			return max;
-	}*/
-	//max = topk[0];
 	*size = *size -1;
 	
 	return max;
@@ -422,7 +414,6 @@ int main()
 				somma += distanze[i];
 			}
 		}
-		// lenght è un topk?
 		if(contaGrafo<k-1)
 		{
 			inserisciNodoMaxHeap(topk,&topkSize,somma,contaGrafo,topkSize);
