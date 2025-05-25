@@ -129,4 +129,5 @@ Tutti i test sono stati superati, ottenendo il massimo punteggio: `30L/30`.
 ## Collegamenti
 
 📄 Specifica del progetto: [specifiche.pdf](./specifiche.pdf) 
+
 📁 Codice sorgente: [progetto.c](./progetto.c)
